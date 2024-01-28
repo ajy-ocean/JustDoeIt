@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- We have to mention which Driver are we using here we are using MySql -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+		<!-- Mention your database url -->
+		<property name="connection.url">jdbc:mysql://localhost:3306/justdoeit</property>
+
+		<!-- Provide your database username and password -->
+		<property name="connection.username">ocean</property>
+		<property name="connection.password">ocean@root</property>
+
+		<!-- dialect is a property which is specific for the database you are using 
+			here since I'm using MySql -->
+		<!-- If you are using older version of version of hibernate -->
+		<!-- <property name="dialect">org.hibernate.dialect.MySQLDialect</property> -->
+		<!-- But if your are using latest version of hibernate then you need to 
+			add MySQL8Dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+		<!-- This property of hibernate helps to UPDATE table automatically -->
+		<property name="hbm2ddl.auto">update</property>
+
+		<!-- This property is used to see what query hibernate has fired -->
+		<property name="show_sql">true</property>
+
+		<!-- This property is used to format our hibernate sql query -->
+		<property name="format_sql">true</property>
+
+		<!-- This is used to map our class so that hibernate can understand that 
+			we have a class that should be treated as an entity -->
+		<mapping class="com.justdoeit.entities.JustDoeIt" />
+	</session-factory>
+</hibernate-configuration>

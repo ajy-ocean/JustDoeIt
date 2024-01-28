@@ -1,7 +1,34 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
-<web-app>
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:web="http://xmlns.jcp.org/xml/ns/javaee">
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <description></description>
+    <display-name>SaveNoteServlet</display-name>
+    <servlet-name>SaveNoteServlet</servlet-name>
+    <servlet-class>com.justdoeit.servlets.SaveNoteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SaveNoteServlet</servlet-name>
+    <url-pattern>/SaveNoteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteServlet</display-name>
+    <servlet-name>DeleteServlet</servlet-name>
+    <servlet-class>com.justdoeit.servlets.DeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteServlet</servlet-name>
+    <url-pattern>/DeleteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EditServlet</display-name>
+    <servlet-name>EditServlet</servlet-name>
+    <servlet-class>com.justdoeit.servlets.EditServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditServlet</servlet-name>
+    <url-pattern>/EditServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
